@@ -207,3 +207,20 @@
     - Ожидать окончания времени игры
   expected-result: |
     Появляется уведомление о проигрыше, игра завершается
+
+- summary: |
+    Проверка поиска определенного вида игры 
+  requirement: |
+    Пользователь должен быть зарегистртрован 
+  prerequisites: |
+    - Выбрать необходимые параметры
+  test-data: |
+    Level = 1, Game Type = With a bot, Time control = 8 min, task = rect_area
+  steps:
+    - Нажать на кнопку "Create a game"
+    - Нажать на Level 1
+    - Нажать на Game Type = With a bot
+    - Нажать на Time control = 8 min
+    - Ввести в поиске rect_area
+  expected-result: |
+    Данный запрос не найден 
